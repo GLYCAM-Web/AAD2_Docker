@@ -1,0 +1,6 @@
+[submodule "image/AAD2"]
+	path = image/AAD2
+	url = https://github.com/GLYCAM-Web/AAD2.git
+[submodule "image/AAD2_Dependencies"]
+	path = image/AAD2_Dependencies
+	url = https://github.com/GLYCAM-Web/AAD2_Dependencies.git

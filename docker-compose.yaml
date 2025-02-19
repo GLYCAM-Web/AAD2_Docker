@@ -1,0 +1,10 @@
+services:
+  AD_environment:
+    image: ${ImageName}:${ImageTag}
+    container_name: ad_environment
+    env_file:
+      - ad.env
+    volumes:
+      - ${USERDATA}:/userdata
+    command: bash
+

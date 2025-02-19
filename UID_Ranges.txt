@@ -1,0 +1,12 @@
+0-99 - system reserved
+100-999 - also reserved, typically, for uids and other stuff
+32,767 - nobody, sometimes
+60,000 - 65,535 - Debian; Systemd; general; nobody, sometimes
+524,288-589,823 - snapd
+524,288-1,879,048,191 - snapd; systemd-nspawn
+
+Choosing an ID for installer:
+
+The ASCII for IA (installer account) is: 73 65; 
+   so installer's UID/GID will be 7365, but can be overridden.
+   7365 also works in 32-bit scenarios.

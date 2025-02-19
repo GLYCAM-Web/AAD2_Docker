@@ -1,0 +1,23 @@
+services:
+  AD_environment:
+    image: ${ImageName}:${ImageTag}
+    build: 
+      context: ./image
+      args:
+        - FROM_IMAGE
+        - IA_USER_ID
+        - IA_GROUP_ID
+        - LU_USER_ID
+        - LU_GROUP_ID
+        - MGL_Tools
+        - Vina_Carb
+        - AD2_GEMS
+        - AD2_GLYLIB
+        - AD2_Code
+        - D_MGL_Tools
+        - D_Vina_Carb
+        - D_AD2_GEMS
+        - D_AD2_GLYLIB
+        - D_AD2_Code
+
+
