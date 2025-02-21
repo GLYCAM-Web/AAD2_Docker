@@ -1,0 +1,8 @@
+Vina-Carb docking job started at: Fri Feb 21 05:08:03 UTC 2025
+VINA_CARB already defined as: /programs/src/VC_1_0
+
+Using this command:
+    vina-carb --config vcconfig --out docking_output.pdbqt --log docking.log
+
+job ended at Fri Feb 21 05:08:39 UTC 2025
+Job appears to have completed.

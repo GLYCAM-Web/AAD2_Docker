@@ -1,0 +1,21 @@
+#!/usr/bin/env gnuplot
+#gnuplot input
+set yrange [0:8]
+set ytics 2 nomirror
+set xrange [1:]
+set ylabel "Number of members" font "Calibri Bold,28" offset 2,0
+set xlabel "Average Interaction Energy" font "Calibri Bold,28"
+set border 3 lc rgb "#000000"
+set style data histograms
+set style histogram cluster gap 0.0
+set style fill solid border -1
+set boxwidth 1.0
+#set xtics 1 border in  font "Calibri Bold,22" nomirror
+unset xtics
+set label "Total Clusters-42" at 0.4,23
+unset key
+set terminal postscript eps enhanced color solid font "Calibri-Bold,26"
+set output "histogram_sorted.eps"
+plot 'input_gplt.txt' using 1 lc rgb "#0000FF"
+#, for[i=2:42] '' using i lc rgb "#0000FF"  notitle
+

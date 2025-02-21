@@ -10,7 +10,7 @@ export LU_USER_ID="$( id -u )"
 export LU_GROUP_ID="$( id -g )"
 
 export ImageName="antibody-docking"
-export ImageTag="2025-02-19-03-12-blf"
+export ImageTag="2025-02-21-03-45-blf"
 
 #### Optional settings customization
 # Create a file called Local_Settings.bash to override the settings above

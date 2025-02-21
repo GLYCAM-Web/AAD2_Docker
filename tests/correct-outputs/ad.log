@@ -1,0 +1,5 @@
+INFO: Evaluating the workdir: /programs/code-temp.
+INFO: Found glycan file without terminal END card. Adding it to the glycan.pdb version.
+INFO: Evaluating the workdir: /programs/code-temp.
+WARNING: Found an existing glycan.pdb and removing it.
+INFO: Found glycan file without terminal END card. Adding it to the glycan.pdb version.

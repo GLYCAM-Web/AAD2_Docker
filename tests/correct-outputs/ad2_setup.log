@@ -1,0 +1,24 @@
+Starting the AD2 setup log at: Fri Feb 21 05:06:52 UTC 2025
+Setting the working directory to: /programs/code-temp
+Found existing vcconfig. Not clobbering it.
+Setup finished.
+
+If there are files ending in .example in this directory, you need to fill the proper values 
+into them and remove any values that are not relevant to you. Then, remove '.example' from 
+the filenames. Don't forget to add all the needed files to the working directory.
+
+
+When fully set up, the working directory should contain these things:
+
+    - The antibody PDB file 
+
+    - The glycan PDB file
+
+    - The glycan ring atoms file called 'glycan_ring_atoms.txt'
+
+    - An AD2 configuration file
+
+    - A VC configuration file
+
+    - If Use_Docker is set to True, there should also be a docker config file
+
