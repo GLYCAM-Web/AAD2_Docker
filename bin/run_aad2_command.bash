@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./settings.sh
+source ./settings.bash
 
 DATE="$( date +%Y-%m-%d-%H-%M-%S )"
 STDOUT_FILE="./logs/run-command_STDOUT_${DATE}.log"
@@ -38,9 +38,7 @@ export LU_WORKING_DIRECTORY
 COMMAND="""
 docker-compose \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
-	up  \
-	2>> ${STDERR_FILE} \
-	>> ${STDOUT_FILE}
+	up  
 """
 #TEST="Y"
 echo "Up:"

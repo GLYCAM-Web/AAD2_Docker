@@ -26,14 +26,14 @@ export AAD2_COMMAND_TO_RUN="AD_Help"
 ## Overriding these can give you control over the image or the name of the container
 ##
 export AAD2_IMAGE_NAME="antibody-docking"
-export AAD2_TAG_NAME="2025-02-23-20-30-blf"
+export AAD2_TAG_NAME="2025-02-23-22-03-blf"
 export AAD2_CONTAINER_NAME="$( id -un )-aad2"
 
 ## Unless you are customizing a lot, you probably want to leave these as-is
 #
-export AAD2_DOCKER_COMPOSE_FILE="./docker-compose.yml"
-export AAD2_DOCKER_COMPOSE_BUILD_FILE="./docker-compose-build.yml"
-export AAD2_SERVICE_NAME="aad2-environment"
+export AAD2_DOCKER_COMPOSE_FILE="./docker-compose.yaml"
+export AAD2_DOCKER_COMPOSE_BUILD_FILE="./docker-compose-build.yaml"
+export AAD2_SERVICE_NAME="aad2_environment"
 
 ## You should probably not override these unless you have an unusual setup
 ##

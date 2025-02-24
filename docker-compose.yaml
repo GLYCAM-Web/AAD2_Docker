@@ -3,8 +3,8 @@
 #################################
 services:
   aad2_environment:
-    image: ${AAD2_IMAGE_NAME}:${AAD2_IMAGE_TAG}
-    container_name: ${AAD2_UTILS_CONTAINER_NAME}
+    image: ${AAD2_IMAGE_NAME}:${AAD2_TAG_NAME}
+    container_name: ${AAD2_CONTAINER_NAME}
     volumes:
       - ${LU_WORKING_DIRECTORY}:${INTERNAL_WORKING_DIR}
     command: ${AAD2_COMPOSE_COMMAND}

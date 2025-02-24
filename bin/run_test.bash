@@ -33,19 +33,20 @@ ${COMMAND}
 "
 ( eval ${COMMAND} ) || {  echo "error starting ad container" && exit 1 ; }
 
-COMMAND="""diff -I CreationDate tests/outputs/histogram_sorted.eps tests/correct-outputs/histogram_sorted.eps"""
+COMMAND="""diff -I CreationDate -I Author tests/outputs/histogram_sorted.eps tests/correct-outputs/histogram_sorted.eps"""
 
 echo "Testing the output using this command:
 ${COMMAND}
 "
 if [ -z "$(${COMMAND})" ] ; then
 	echo "The test passed."
+	echo "Removing test output."
+	( cd tests && rm -rf outputs )
 else
 	echo "The test failed."
 	echo "Inspecting the following files might provide clues about why the tests failed:"
 	echo "${STDERR_FILE}"
 	echo "${STDOUT_FILE}"
+	echo "Also take a look at the test output in tests/outputs. Be sure to (re)move it if you run the test again."
 fi
 
-echo "Removing test output."
-( cd tests && rm -rf outputs )
