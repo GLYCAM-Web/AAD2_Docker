@@ -32,5 +32,5 @@ COMMAND="""docker run \
 echo "Starting a container with this command:
 ${COMMAND}
 "
-( eval ${COMMAND} ) || {  echo "error starting ad container" && exit 1 ; }
+eval ${COMMAND} 
 
