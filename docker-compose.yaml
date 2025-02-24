@@ -1,8 +1,11 @@
+#################################
+#       AAD2_Environment        #
+#################################
 services:
-  AD_environment:
-    image: ${ImageName}:${ImageTag}
-    container_name: ad_environment
+  aad2_environment:
+    image: ${AAD2_IMAGE_NAME}:${AAD2_IMAGE_TAG}
+    container_name: ${AAD2_UTILS_CONTAINER_NAME}
     volumes:
-      - ${USERDATA}:/userdata
-    command: bash
+      - ${LU_WORKING_DIRECTORY}:${INTERNAL_WORKING_DIR}
+    command: ${AAD2_COMPOSE_COMMAND}
 

@@ -2,3 +2,4 @@ logs
 *.swp
 tests/outputs
 *git-ignore-me*
+Local_Settings.bash

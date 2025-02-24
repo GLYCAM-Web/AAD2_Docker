@@ -1,6 +1,6 @@
 services:
-  AD_environment:
-    image: ${ImageName}:${ImageTag}
+  aad2_environment:
+    image: ${AAD2_IMAGE_NAME}:${AAD2_IMAGE_TAG}
     build: 
       context: ./image
       args:

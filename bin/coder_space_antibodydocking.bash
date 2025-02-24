@@ -2,22 +2,21 @@
 
 #### General settings
 source ./settings.bash
-Container_Dir="/programs/code-temp"
 
-if [ "${1}zzz" == "zzz" ] ; then
-	Host_Dir="$(pwd)"
+if [ -z "${1}" ] ; then
+        LU_WORKING_DIRECTORY="$(pwd)"
 	echo "No local directory specified. Mounting the current directory"
 else
-	Host_Dir="${1}"
+        LU_WORKING_DIRECTORY="${1}"
 fi
 
 echo """This directory on the host:
 
-    ${Host_Dir}
+    ${LU_WORKING_DIRECTORY}
 
 Will be mounted into the container at:
 
-    ${Container_Dir}
+    ${INTERNAL_WORKING_DIR}
 """
 
 COMMAND="""docker run \
@@ -25,8 +24,8 @@ COMMAND="""docker run \
     -u antibodydocking \
     --name ad_coder_temp \
     --mount \
-    type=bind,src=${Host_Dir},dst=${Container_Dir} \
-    ${ImageName}:${ImageTag} \
+    type=bind,src=${LU_WORKING_DIRECTORY},dst=${INTERNAL_WORKING_DIR} \
+    ${AAD2_IMAGE_NAME}:${AAD2_TAG_NAME} \
     bash"""
 
 echo "Starting a container with this command:
