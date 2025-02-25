@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+### On Thoreau head node, docker-compose does not exist.  One must use docker compose.
+### On the compute nodes, neither docker compose nor docker-compose exists.
+
 source ./settings.bash
 
 DATE="$( date +%Y-%m-%d-%H-%M-%S )"
@@ -20,13 +23,7 @@ if [ ! -d "${LU_WORKING_DIRECTORY}" ] ; then
 	exit 1
 fi
 
-if [ ! -z "${2}" ] ; then
-	AAD2_COMMAND_TO_RUN="${2}"
-else
-	echo "No command specified, using: ${AAD2_COMMAND_TO_RUN}"
-fi
-
-export AAD2_COMPOSE_COMMAND="bash -lc \"${AAD2_COMMAND_TO_RUN} ${INTERNAL_WORKING_DIR}\""
+export AAD2_COMPOSE_COMMAND="bash -lc \"cd ${INTERNAL_WORKING_DIR} && run_AD_docking\""
 
 echo "The AAD2_COMPOSE_COMMAND is:
 >>>${AAD2_COMPOSE_COMMAND}<<<"
