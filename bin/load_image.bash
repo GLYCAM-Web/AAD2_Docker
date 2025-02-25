@@ -21,7 +21,6 @@ if [ -z "${1}" ] ; then
 	exit 1
 fi
 
-does_image_exist() {
 
 does_image_exist() {
         if [ "$( docker images --format {{.Repository}}:{{.Tag}} | grep -c ${1} )" -eq "0" ]; then
