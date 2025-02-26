@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ### On Thoreau head node, docker-compose does not exist.  One must use docker compose.
-### On the compute nodes, neither docker compose nor docker-compose exists.
+### On the compute nodes, docker compose does not exist.  One must use docker-compose.
 
 source ./settings.bash
 
@@ -33,7 +33,7 @@ echo "The local dir is:
 export LU_WORKING_DIRECTORY
 
 COMMAND="""
-docker compose \
+docker-compose \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
 	up  
 """
@@ -44,7 +44,7 @@ if [ "${TEST}" != "Y" ]; then
 	eval ${COMMAND}
 fi
 COMMAND="""
-docker compose \
+docker-compose \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
         down  
 """
