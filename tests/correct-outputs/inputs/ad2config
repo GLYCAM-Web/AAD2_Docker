@@ -1,8 +1,0 @@
-MGLToolsPckgs_Location="/programs/MGLToolsPckgs"
-Vina_Carb_Source_Location="/programs/src/VC_1_0"
-Python_2_7_Location="/programs/include/python2.7"
-Antibody_File_Name="UPLOADED_2H1_PDB_MONOMER_.pdb"
-Glycan_File_Name="DManpa1-8DNeup5Acb2-4DFrufa2-OH_structure.pdb"
-Glycan_Flexibility="Partial"
-Number_of_Replicas="5"
-Computing_Mode="Local_Host_Serial"
