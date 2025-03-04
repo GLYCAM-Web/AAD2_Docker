@@ -26,7 +26,7 @@ export AAD2_COMMAND_TO_RUN="AD_Help"
 ## Overriding these can give you control over the image or the name of the container
 ##
 export AAD2_IMAGE_NAME="antibody-docking"
-export AAD2_TAG_NAME="2025-03-04-05-41-blf"
+export AAD2_TAG_NAME="2025-03-04-07-27-blf"
 export AAD2_CONTAINER_NAME="$( id -un )-aad2"
 
 ## Unless you are customizing a lot, you probably want to leave these as-is
