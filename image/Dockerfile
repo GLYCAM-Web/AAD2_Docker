@@ -66,7 +66,7 @@ RUN cd /programs/src/${D_AAD2_GLYLIB}/lib && make && cp libglylib.a /programs/li
 ARG AAD2_Code='AAD2'
 ARG D_AAD2_Code=AAD2
 COPY --chown=installer:installer ${AAD2_Code} /programs/src/${D_AAD2_Code}/
-RUN cd /programs/src/${AAD2_Code} && ./Compile && ./Install /programs
+RUN cd /programs/src/${AAD2_Code} && ./compile && ./install /programs
 
 USER root
 
