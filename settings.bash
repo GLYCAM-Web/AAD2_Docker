@@ -27,7 +27,11 @@ export AAD2_COMMAND_TO_RUN="AD_Help"
 ##
 export AAD2_IMAGE_NAME="antibody-docking"
 export AAD2_TAG_NAME="2025-03-04-07-27-blf"
-export AAD2_CONTAINER_NAME="$( id -un )-aad2"
+if [ -z "${CONTAINER_NAME_PREFIX}" ] ; then
+	tempstr="$(uuidgen)"
+	CONTAINER_NAME_PREFIX=${tempstr:0:5}
+fi
+export AAD2_CONTAINER_NAME="${CONTAINER_NAME_PREFIX}-$( id -un )-aad2"
 
 ## Unless you are customizing a lot, you probably want to leave these as-is
 #
