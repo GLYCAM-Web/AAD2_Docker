@@ -1,0 +1,8 @@
+MGLToolsPckgs_Location="/programs/MGLToolsPckgs"
+Vina_Carb_Source_Location="/programs/src/VC_1_0"
+Python_2_7_Location="/programs/include/python2.7"
+Antibody_File_Name="1m7i.pdb"
+Glycan_File_Name="LRhapa1-2LRhapa1-3LRhapa1-3DGlcpNAcb1-2LRhapa1-OME_structure.pdb"
+Glycan_Flexibility="Partial"
+Number_of_Replicas="5"
+Computing_Mode="Local_Host_Serial"

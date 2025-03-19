@@ -26,7 +26,7 @@ export AAD2_COMMAND_TO_RUN="AD_Help"
 ## Overriding these can give you control over the image or the name of the container
 ##
 export AAD2_IMAGE_NAME="antibody-docking"
-export AAD2_TAG_NAME="2025-03-05-09-36-blf"
+export AAD2_TAG_NAME="2025-03-18-10-41-blf"
 if [ -z "${CONTAINER_NAME_PREFIX}" ] ; then
 	tempstr="$(uuidgen)"
 	CONTAINER_NAME_PREFIX=${tempstr:0:5}
