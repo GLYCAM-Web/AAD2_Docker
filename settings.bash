@@ -53,6 +53,32 @@ export LU_GROUP_ID="$( id -g )"
 #
 export INTERNAL_WORKING_DIR="/home/antibodydocking/workdir/"
 
+## It is necessary to figure out whether we can use docker-compose or must use docker compose.
+#
+#[webdev@thoreau AAD2_Docker]$ docker-compose version
+#bash: docker-compose: command not found...
+#[webdev@thoreau AAD2_Docker]$ echo $?
+#127
+docker-compose version > /dev/null 2>&1
+result="$?"
+if [ "${result}" == "0" ] ; then
+    compose_command="docker-compose"
+else
+    docker compose version > /dev/null 2>&1
+    result="$?"
+    if [ "${result}" == "0" ] ; then
+        compose_command="docker compose"
+    else
+        echo "Cannot determine command for using docker compose. Exiting."
+        echo "The result from trying 'docker compose version' is ${result}."
+        exit ${result}
+    fi
+fi
+echo "The command for using docker compose is >>>${compose_command}<<<"
+#[webdev@thoreau AAD2_Docker]$ docker compose version
+#Docker Compose version v2.27.1
+#[webdev@thoreau AAD2_Docker]$ echo $?
+#0
 
 #### Optional settings customization
 # Create a file called Local_Settings.bash to override the settings above

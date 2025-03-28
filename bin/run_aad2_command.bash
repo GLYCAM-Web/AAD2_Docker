@@ -36,8 +36,9 @@ echo "The local dir is:
 export LU_WORKING_DIRECTORY
 
 COMMAND="""
-docker-compose \
+${compose_command} \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
+        --project-name ${CONTAINER_NAME_PREFIX} \
 	up  
 """
 #TEST="Y"
@@ -47,8 +48,9 @@ if [ "${TEST}" != "Y" ]; then
 	eval ${COMMAND}
 fi
 COMMAND="""
-docker-compose \
+${compose_command} \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
+        --project-name ${CONTAINER_NAME_PREFIX} \
         down  
 """
 echo "Down:"

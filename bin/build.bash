@@ -21,7 +21,7 @@ echo "FROM_IMAGE is ${FROM_IMAGE}"
 STDERR_FILE="./logs/build_STDERR_${DATE}.log"
 STDOUT_FILE="./logs/build_STDOUT_${DATE}.log"
 DOCKER_COMMAND="""
-    docker-compose \
+    ${compose_command} \
 	--file ${AAD2_DOCKER_COMPOSE_BUILD_FILE} \
 	build ${AAD2_SERVICE_NAME} \
 	2>> ${STDERR_FILE} \
