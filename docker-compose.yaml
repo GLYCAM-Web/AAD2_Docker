@@ -8,4 +8,9 @@ services:
     volumes:
       - ${LU_WORKING_DIRECTORY}:${INTERNAL_WORKING_DIR}
     command: ${AAD2_COMPOSE_COMMAND}
+    networks: 
+      aad2-net:
 
+networks:
+  aad2-net:
+    name: ${AAD2_CONTAINER_NAME}-net

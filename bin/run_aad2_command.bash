@@ -36,7 +36,7 @@ echo "The local dir is:
 export LU_WORKING_DIRECTORY
 
 COMMAND="""
-docker compose \
+docker-compose \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
 	up  
 """
@@ -47,7 +47,7 @@ if [ "${TEST}" != "Y" ]; then
 	eval ${COMMAND}
 fi
 COMMAND="""
-docker compose \
+docker-compose \
 	--file ${AAD2_DOCKER_COMPOSE_FILE} \
         down  
 """
