@@ -26,7 +26,7 @@ export AAD2_COMMAND_TO_RUN="AD_Help"
 ## Overriding these can give you control over the image or the name of the container
 ##
 export AAD2_IMAGE_NAME="antibody-docking"
-export AAD2_TAG_NAME="2025-03-26-00-47-blf"
+export AAD2_TAG_NAME="2025-03-31-00-22-blf"
 if [ -z "${CONTAINER_NAME_PREFIX}" ] ; then
 	tempstr="$(uuidgen)"
 	CONTAINER_NAME_PREFIX=${tempstr:0:5}
@@ -59,8 +59,10 @@ export INTERNAL_WORKING_DIR="/home/antibodydocking/workdir/"
 #bash: docker-compose: command not found...
 #[webdev@thoreau AAD2_Docker]$ echo $?
 #127
+#docker-compose version 
 docker-compose version > /dev/null 2>&1
 result="$?"
+#echo "result is ${result}"
 if [ "${result}" == "0" ] ; then
     compose_command="docker-compose"
 else
